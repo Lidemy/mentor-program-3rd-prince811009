@@ -1,9 +1,9 @@
 function reverse(str) {
-  var result = '';
-  for (i = str.length - 1; i >= 0; i--) {
+  let result = '';
+  for (let i = str.length - 1; i >= 0; i -= 1) {
     result += str[i];
   }
   console.log(result);
 }
 
-reverse('hello')
+reverse('nick');
