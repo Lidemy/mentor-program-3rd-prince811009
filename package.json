@@ -29,7 +29,8 @@
   "homepage": "https://github.com/aszx87410/program-3rd#readme",
   "dependencies": {
     "eslint": "^5.15.1",
-    "module_name": "^1.0.0"
+    "module_name": "^1.0.0",
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "eslint": "^5.15.1",
