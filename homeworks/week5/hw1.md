@@ -2,8 +2,9 @@
 了解 CML 以及 Git 版本控制
 ### Command Line
    *  常用指令
-|指令名稱|功能 |
-|:------:|:---:|
+   
+|指令名稱|功能|
+|:-------------:|:-------------|
 |ls      |列出目前有的所有檔案名稱|
 |cd/cd ..|切換到指定資料夾 / 回到上一層資料夾|
 |touch|更改檔案最後時間 / 新增檔案|
@@ -12,20 +13,24 @@
 |rmdir|刪除資料夾|
 |pwd|印出目前位置|
 |exit|離開|
+
 ### Git
    *  常用指令
+   
 |指令名稱|功能|
+|:-------------:|:-------------|
 |git init|初化這個目錄，讓 Git 開始對該目錄進行版本控制|
 |git add [name] / git add . |將檔案暫存 / 將所有檔案暫存|
-|git commit -m "鍵入commit message"/git commit -am "鍵入commit message"|對檔案進行版本控制 / 將檔案暫存並進行版本控制|
+|git commit -m/-am "鍵入commit message"|對檔案進行版本控制 / 將檔案暫存並進行版本控制|
 |.ignoregit| 將不需要需要進行版本控制的檔案放置於此|
 |git status|檢視目前版本控制狀態|
 |git log|檢視各版本的亂數命名、時間以及各種資訊|
 |git branch [name]|建立一個新的分支|
-|git branch -d [name]/git branch -D [name] |刪除分支 / 強制刪除分支|
+|git branch -d/-D [name] |刪除分支 / 強制刪除分支|
 |git checkout [name]|切換到此分支|
 |git push origin [anme]|將檔案 push 到 GitHub 分享|
 |git pull origin master|將最新版本 pull 至本地|
+
 #### 學習心得
 在電影中常看到的工程師或是駭客常在電腦中打一些很酷炫的指令，如今終於也懂得一點皮毛中的皮毛了，感覺很興奮 ! 這周了解到 CML 的基本操作以及 Git 版本控制的功能以及重要性，而且這也是往後
 工作的重要工具和技能之一，非常實用 !
