@@ -1,0 +1,122 @@
+body{
+	margin:0;
+	font-family: sans-serif;
+}
+
+nav{
+	background: #1F2835;
+	color: #FFFFFF;
+	margin:0;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.nav-title{
+	margin: 12px;
+	font-size: 20px;
+}
+
+nav > div{
+	display: inline-block;
+}
+
+nav > div.menu > ul{
+	padding: 0;
+}
+
+nav > div.menu > ul > li{
+	display: inline;
+	margin: 5px;
+	color: #A3A5A7;
+}
+
+.menu > ul > li > a:hover{
+	color: white;
+}
+
+.header{
+	margin-top: 50px;
+	background: #E9FAFF;
+}
+
+.wrapper{
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 42px 25px;
+}
+
+.title{
+	font-size: 72px;
+}
+
+.btn1{
+	background-color: #1F7EF2;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 15px 30px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.btn1:hover{
+	background-color: #0060D5;
+}
+
+.pack{
+	display: inline-block;
+	max-width: 32%;
+}
+
+.heading{
+	font-size: 32px;
+	font-family: Microsoft JhengHei;
+	margin: 10px 0 0 3px;
+}
+
+.pack img{
+	width: 100%;
+}
+
+#img2{
+	width: 97.5%;
+	margin-left: 4px;
+}
+
+.btn2{
+	background-color: #939393;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 12px 20px;
+	text-align: center;
+	font-size: 16px;
+}
+
+.btn2:hover{
+	background-color: #7A7A7A;
+}
+
+footer{
+	border-top-color: #E3E3E3;
+	border-top-width: 1px;
+	border-top-style: solid;
+	margin-top: 40px;
+	padding: 20px 0;
+}
+
+@media screen and (max-width: 750px){
+	.header{
+		padding-top:20px;
+	}
+	.wrapper{
+		padding-top:22px;
+	}
+	.pack{
+		display: block;
+		max-width: 100%;
+		margin-top: 20px;
+	}
+}

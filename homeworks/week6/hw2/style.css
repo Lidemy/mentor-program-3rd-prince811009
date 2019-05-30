@@ -1,0 +1,107 @@
+body{
+	margin: 0 auto;
+}
+
+.nav{
+	height: 70px;
+}
+
+#medium{
+	width: 2.5%;
+	position:absolute;
+	top: 16px;
+	left: 190px;
+}
+
+#user{
+	width: 2.5%;
+	position: absolute;
+	top: 16px;
+	left: 1280px;
+	border: 2px solid white;
+	border-radius: 38px;
+}
+
+#picture{
+	width: 100%;
+}
+
+button{
+	height: 32px;
+    line-height: 32px;
+    padding: 0 14px;
+	border: 1px solid rgba(0,0,0,.54);
+	border-radius: 5px;
+	background: white;
+	font-size: 15px;
+	text-align: center;
+    text-decoration: none;
+    position: absolute;
+	top: 22px;
+	left: 1180px;
+}
+
+button:hover{
+	border-color: black;
+}
+
+.clap{
+	position: fixed;
+	top: 150px;
+	left: 50px;
+	width: 30px;
+	height: 30px;
+}
+
+.clap:hover{
+	cursor: pointer;
+}
+
+.clap_number{
+	position: absolute;
+	top: 31px;
+	left: 45px;
+}
+
+.clap_number:hover{
+	cursor: pointer;
+}
+
+.clap_hands{
+	position: absolute;
+	top: 28px;
+	left: 19px;
+}
+
+.wrapper{
+	margin: 30px auto;
+	max-width: 960px;
+	padding: 0 45px;
+}
+
+.title{
+	font-size: 42px;
+	margin: 40px 0;
+}
+
+.article p{
+	font-size: 20px;
+	padding-top: 3px
+}
+
+.article ol{
+	font-size: 20px;
+	margin: 20px 0;
+	padding: 20px 0;
+}
+
+.article ol > li{
+	margin: 0 0 20px 20px;
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 1280px) {
+	.clap{
+		display: none;
+	}
+}
