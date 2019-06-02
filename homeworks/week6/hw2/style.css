@@ -1,25 +1,5 @@
 body{
-	margin: 0 auto;
-}
-
-.nav{
-	height: 70px;
-}
-
-#medium{
-	width: 2.5%;
-	position:absolute;
-	top: 16px;
-	left: 190px;
-}
-
-#user{
-	width: 2.5%;
-	position: absolute;
-	top: 16px;
-	left: 1280px;
-	border: 2px solid white;
-	border-radius: 38px;
+	margin: 0;
 }
 
 #picture{
