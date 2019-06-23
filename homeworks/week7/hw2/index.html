@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>week-hw2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="backgroundTop"></div>
+        <div class="main">
+            <div class="header">
+                <div class="headerTitle">程式導師實驗計畫第三期報名表單</div>
+                <p>詳情請參考：<a href="https://medium.com/hulis-blog/mentor-program-3rd-47a2e85e33b3"
+                        target="_blank">https://medium.com/hulis-blog/mentor-program-3rd-47a2e85e33b3</a></p>
+                <p>填完之後請務必按照文章內的說明再寄信給我，才算報名成功喔</p>
+                <div class="attention">*必填</div>
+                <form class="form">
+                    <div class="formRow">
+                        <span class="formTitle">電子郵件地址 </span><span class="attention"> *</span>
+                        <div class="formInput"><input type="email" name="email" placeholder="您的電子郵件" /></div>
+                        <div class="flag attention">這是必填問題</div>
+                    </div>
+                    <div class="formRow">
+                        <span class="formTitle">暱稱 </span><span class="attention"> *</span>
+                        <div class="formInput"><input type="text" name="nickname" placeholder="您的回答" /></div>
+                        <div class="flag attention">這是必填問題</div>
+                    </div>
+                    <div class="formRow">
+                        <span class="formTitle">報名類型 </span><span class="attention"> *</span>
+                        <div class="formInput"><label><input type="radio" name="payment" id="payment1" />
+                                從零到一基礎班（兩個月後開始收保證金 5000，淘汰不退還，結業後兩個月內找到工作付一個月半薪水，沒工作不用付）</label></div>
+                        <div class="formInput"><label><input type="radio" name="payment" id="payment2" />
+                                在職工程師加強班（兩個月後開始收保證金 5000，三個月時收學費 35000 元台幣，被淘汰不退還）</label></div>
+                        <div class="flag attention">這是必填問題</div>
+                    </div>
+                    <div class="formRow">
+                        <span class="formTitle">是否有程式相關背景？ </span><span class="attention"> *</span>
+                        <p class="details">範例：無、高中時候學過C++、學過一點網頁前端、目前在資策會上課...</p>
+                        <div class="formInput"><input type="text" name="program" placeholder="您的回答" /></div>
+                        <div class="flag attention">這是必填問題</div>
+                    </div>
+                    <div class="formRow">
+                        <span class="formTitle">其他</span>
+                        <p class="details">任何你想說的</p>
+                        <div class="formInput"><input type="text" name="other" placeholder="您的回答" /></div>
+                        <div> </div>
+                    </div>
+                    <input class="btn" type='submit'>
+                    <p>請勿利用 Google 表單送出密碼。</p>
+                </form>
+            </div>
+            <script src="all.js"></script>
+</body>
+</html>

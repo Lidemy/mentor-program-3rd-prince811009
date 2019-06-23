@@ -1,0 +1,22 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+  .message {
+    font-size: 40px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 300px;
+    flex-direction: column;
+  }
+
+  #block {
+    display: none;
+  }
+
+  #block.active {
+    display: block;
+  }
