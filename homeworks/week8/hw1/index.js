@@ -1,17 +1,18 @@
-const request = new XMLHttpRequest();
+const request = new XMLHttpRequest(); 
+const wrap = document.querySelector('.wrap');
 const body = document.querySelector('body');
 const btn = document.querySelector('.btn');
 const message = document.querySelector('.message');
 const picture = document.querySelector('.picture');
 
 request.onload = () => {
-  if (request.status >= 200 && request.status < 400) {
+  if (request.status >=200 && request.status < 400) {
     const response = request.responseText;
     const json = JSON.parse(response);
     const result = json.prize;
 
-    switch (result) {
-      case 'FIRST': {
+    switch(result) {
+      case'FIRST': {
         picture.classList.remove('active');
         picture.src = 'fly.jpg';
         message.innerText = '恭喜你中頭獎!日本東京來回雙人遊！';
@@ -19,7 +20,7 @@ request.onload = () => {
         btn.innerText = '再試一次';
         break;
       }
-      case 'SECOND': {
+      case'SECOND': {
         picture.classList.remove('active');
         picture.src = 'tv.jpg';
         message.innerText = '二獎！90 吋電視一台！';
@@ -27,7 +28,7 @@ request.onload = () => {
         btn.innerText = '再試一次';
         break;
       }
-      case 'THIRD': {
+      case'THIRD': {
         picture.classList.remove('active');
         picture.src = 'youtuber.jpg';
         message.innerText = '恭喜你抽中三獎：知名 YouTuber 簽名握手會入場券一張，bang！';
@@ -35,7 +36,7 @@ request.onload = () => {
         btn.innerText = '再試一次';
         break;
       }
-      case 'NONE': {
+      case'NONE': {
         picture.classList.add('active');
         message.innerText = '銘謝惠顧';
         body.style.background = 'gray';
@@ -52,7 +53,7 @@ request.onload = () => {
   }
 };
 
-btn.addEventListener('click', function () {
+btn.addEventListener('click', function() {
   request.open('GET', 'https://dvwhnbka7d.execute-api.us-east-1.amazonaws.com/default/lottery', true);
   request.send();
 });
