@@ -24,12 +24,13 @@
 		?>
 
 	<div class="form-wrapper">
-		<h1>新增留言</h1>
+		<p>「本站為練習用網站，因教學用途刻意忽略資安的實作，註冊時請勿使用任何真實的帳號或密碼」</p>
+		<h1>來留言吧~</h1>
 		<form class="form" method="POST" action="./add_comment.php">
 			<div class="form__row">
 				內容：
 				<div>
-					<textarea name="content" rows="5" cols="30"></textarea>
+					<textarea name="content" rows="10" cols="80"></textarea>
 				</div>			
 			</div>
 			<?php if ($user) { ?>
