@@ -41,7 +41,7 @@ Codewar 是一個程式解題平台，上面充滿著各種開發者出的題目
 題目連結：https://www.codewars.com/kata/who-likes-it  
 題目說明：模擬 Facebook 按讚時或出現的文字
 
-### ❌ String repeat
+### ✅ String repeat
 題目連結：https://www.codewars.com/kata/string-repeat/javascript  
 題目說明：回傳重複 n 遍的字串
 
