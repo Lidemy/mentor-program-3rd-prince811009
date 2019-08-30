@@ -10,8 +10,10 @@
 			$content = $_POST['content'];
 			$id = $_POST['id'];
 			
-			$sql = "UPDATE prince811009_comments SET content = '$content' WHERE id = $id AND username = '$username'";
-			if ($conn->query($sql)) {
+			$sql = "UPDATE prince811009_comments SET content = ? WHERE id = ? AND username = ?";
+			$stmt = $conn->prepare($sql);
+			$stmt->bind_param("sis", $content, $id, $user);
+			if ($stmt->execute()) {
 				header('Location: ./index.php');
 			} else {
 				printMessage($conn->error, $_SERVER["HTTP_REFERER"]);

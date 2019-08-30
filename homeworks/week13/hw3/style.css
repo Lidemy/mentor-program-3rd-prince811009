@@ -78,8 +78,8 @@
     right: 10px;
 }
 .delete-comment input[type=submit] .edit-comment input[type=submit] {
-    /* width: 100px;
-    font-size: 25px; */
+    width: 100px;
+    font-size: 25px;
 }
 .edit-comment {
     position: absolute;
@@ -92,4 +92,12 @@
 }
 .page a {
     margin-left: 10px;
+}
+.btn {
+    width: 50px;
+    background: white;
+    color: black;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
 }

@@ -11,8 +11,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Home</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<link rel="stylesheet" href="./style.css">
-</head>
+	<script>
+		$(document).ready(function() {
+			$('.comments').on('click', '.delete-comment', function(e) {
+                if (!confirm('是否確定刪除 ?')) return;
+				const id = $(e.target).attr('data-id');
+
+				$.ajax({
+					method: "POST",
+					url: "./delete_comment.php",
+					data: {
+						id
+					}
+				}).done(function(response) {
+                    const msg = JSON.parse(response)
+                    alert(msg.message)
+                    const subComment = $(e.target).parent('.sub-comment')
+                    if (subComment.length === 0) {
+                        $(e.target).parent('.comment').hide(200)
+                    } else {
+                        subComment.hide(200)
+                    }
+				}).fail(function(){
+					alert('刪除失敗');
+				});
+			})
+		})
+	</script>
 <body>
 	<?php include_once('./navbar.php') ?>
 	<?php
@@ -22,8 +49,12 @@
 		}
 		$size = 20;
 		$start = $size * ($page - 1);
-		$sql = "SELECT c.id, c.content, c.created_at, c.username, u.nickname FROM prince811009_comments as c LEFT JOIN prince811009_users as u ON c.username = u.username WHERE c.parent_id = 0 ORDER BY c.id DESC LIMIT $start, $size";
-		$result = $conn->query($sql);	
+		$sql = "SELECT c.id, c.content, c.created_at, c.username, u.nickname FROM prince811009_comments as c LEFT JOIN prince811009_users as u ON c.username = u.username WHERE c.parent_id = 0 ORDER BY c.id DESC LIMIT ?, ?";
+		
+		$stmt = $conn->prepare($sql);
+		$stmt->bind_param("ii", $start, $size);
+		$is_success = $stmt->execute();
+		$result = $stmt->get_result();
 	?>
 	<div class="container">
 		<?php
@@ -69,7 +100,7 @@
 
 	<div class="comments">
 		<?php
-			if ($result) {
+			if ($is_success) {
 				while($row = $result->fetch_assoc()) {
 					?>
 						<div class="comment">
@@ -87,9 +118,13 @@
 							<div class="sub-comments">
 								<?php
 									$parent_id = $row['id'];
-									$sql_sub = "SELECT c.id, c.content, c.created_at, c.username, u.nickname FROM prince811009_comments as c LEFT JOIN prince811009_users as u ON c.username = u.username WHERE c.parent_id = $parent_id ORDER BY c.id DESC";
-									$result_sub = $conn->query($sql_sub);
-									if ($result_sub) {
+									$sql_sub = "SELECT c.id, c.content, c.created_at, c.username, u.nickname FROM prince811009_comments as c LEFT JOIN prince811009_users as u ON c.username = u.username WHERE c.parent_id = ? ORDER BY c.id DESC";
+									$stmt_sub = $conn->prepare($sql_sub);
+									$stmt_sub->bind_param("i", $parent_id);
+									$is_sub_success = $stmt_sub->execute();
+									$result_sub = $stmt_sub->get_result();
+
+									if ($is_sub_success) {
 										while($row_sub = $result_sub->fetch_assoc()) {
 								?>
 									<div class="sub-comment">

@@ -36,11 +36,8 @@
 
 	function renderDeleteBtn($id) {
 		return "
-		<div class='delete-comment'>
-			<form method='POST' action='./delete_comment.php'>
-				<input type='hidden' name='id' value='$id' />
-				<input type='submit' value='刪除' />		
-			</form>
+		<div class='btn delete-comment' data_id='$id'>
+			刪除
 		</div>
 		";
 	}

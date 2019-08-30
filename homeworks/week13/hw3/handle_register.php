@@ -15,8 +15,10 @@
 			$username = $_POST['username'];
 			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-			$sql = "INSERT INTO prince811009_users(nickname, username, password) VALUES ('$nickname', '$username', '$password')";
-			if ($conn->query($sql)) {
+			$sql = "INSERT INTO prince811009_users(nickname, username, password) VALUES (?, ?, ?)";
+			$stmt = $conn->prepare($sql);
+			$stmt->bind_param("sss", $nickname, $username, $password);
+			if ($stmt->execute()) {
 				$_SESSION['username'] = $username;
 				printMessage('註冊成功', './index.php');
 			} else {
