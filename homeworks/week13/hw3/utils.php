@@ -36,7 +36,7 @@
 
 	function renderDeleteBtn($id) {
 		return "
-		<div class='btn delete-comment' data_id='$id'>
+		<div class='btn delete-comment' data-id='$id'>
 			刪除
 		</div>
 		";

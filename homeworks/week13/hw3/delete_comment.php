@@ -12,17 +12,20 @@
 			$stmt = $conn->prepare($sql);
 			$stmt->bind_param("iss", $id, $id, $user);
 			if ($stmt->execute()) {
+				// echo "success";
 				echo json_encode(array(
 				'result' => 'success',
 				'message' => 'successfully deleted'
 				));
 			} else {
+				// echo "fail"
 				echo json_encode(array(
 					'result' => 'failure',
 					'message' => 'delete failed'
 				));
 			}
 		} else {
+			// echo "fail";
 			echo json_encode(array(
 				'result' => 'failure',
 				'message' => 'delete failed'

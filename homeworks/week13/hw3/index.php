@@ -11,14 +11,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Home</title>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 	<link rel="stylesheet" href="./style.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
 	<script>
 		$(document).ready(function() {
-			$('.comments').on('click', '.delete-comment', function(e) {
-                if (!confirm('是否確定刪除 ?')) return;
-				const id = $(e.target).attr('data-id');
+			// console.log($) //check whether jQuery is imported
+			$('.comments').on('click', '.delete-comment', function(e) {				
+				if (!confirm('是否確定刪除 ?')) return
+				const id = $(e.target).attr('data-id')
 
+				// console.log('---Defining ajax operation')
 				$.ajax({
 					method: "POST",
 					url: "./delete_comment.php",
@@ -26,17 +28,18 @@
 						id
 					}
 				}).done(function(response) {
-                    const msg = JSON.parse(response)
-                    alert(msg.message)
-                    const subComment = $(e.target).parent('.sub-comment')
-                    if (subComment.length === 0) {
-                        $(e.target).parent('.comment').hide(200)
-                    } else {
-                        subComment.hide(200)
-                    }
-				}).fail(function(){
-					alert('刪除失敗');
+					const msg = JSON.parse(response)
+					console.log('msg:', msg)
+					const subComment = $(e.target).parent('.sub-comment')
+					if (subComment.length === 0) {
+						$(e.target).parent('.comment').hide(200)
+					} else {
+						subComment.hide(200)
+					}
+				}).fail(function() {
+					alert('刪除失敗')
 				});
+				// console.log('---ajax operation is defined')
 			})
 		})
 	</script>
