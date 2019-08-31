@@ -1,6 +1,28 @@
 ## Bootstrap 是什麼？
  - 為一種用於網站和應用程式開發的前端框架，內容包括 HTML、CSS 及JavaScript 的框架，以及擴充套件，目的在於使動態網頁和開發更便利。
  - 使用方式也很簡便，可利用 Bootstrap 提供的連結，以引用連結的方式來套用此框架。
+### 優點 
+ - 避免重工，可以應用現成的功能
+ - 可快速應用響應式網頁設計
+ - 在不同專案或是不同開發者之間，能夠在開發過程中獲得程式碼的一致性
+ - 提供許多速成模組
+ - 確保跨瀏覽器的閱讀相容性
+ - 內建 icon 可以直接使用 ( 定義 class 即可 )
+ ### 下載
+ - download Bootstrap
+ - BootstrapCDN: 跳過下載並使用 BootstrapCDN 將 Boostrap 的 CSS 和 JS 加到專案中。
+ ```
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+```
+- npm: 用 npm 將 Bootstrap 安裝到基於 Node.js 的應用程式中。
+```
+$ npm install bootstrap
+```
+
+
 
 ## 請簡介網格系統以及與 RWD 的關係
  - 網格系統 (Grid System) 可使網頁在不同螢幕寬度上適應及自動調整，原理為藉由格數來排版。
