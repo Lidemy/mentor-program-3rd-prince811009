@@ -1,5 +1,5 @@
 ## Design URL Shortening service
-
+![URL Shortening service](/url-shortener.png)
 
  - 由 Client 端發出 request，Load Balancer 會平均分攤各伺服器的流量後傳送出去。
  - 此時若 cache 已有資料的話，server 會優先向 cache 查詢，若無資料則才會向正規 database 查詢。
