@@ -25,17 +25,17 @@
 
  - 更新欄位
  ```
- UPDATE [TABLE__NAME] SET [欄位] = [值] WHERE 
+ UPDATE [TABLE__NAME] SET [欄位] = [值] WHERE [條件]
  ```
 
  - 刪除資料欄位
  ```
- DELETE FROM [TABLE__NAME] WHERE
+ DELETE FROM [TABLE__NAME] WHERE [條件]
  ```
 
  - 查詢資料
  ```
- SELECT FROM [TABLE__NAME] WHERE 
+ SELECT FROM [TABLE__NAME] WHERE [條件]
  ```
 
  #### PHP 基礎語法
