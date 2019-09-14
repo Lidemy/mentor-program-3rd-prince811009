@@ -1,0 +1,50 @@
+$brand-color: red;
+
+.box {
+    background: $brand-color;
+}
+
+.list {
+    background: $brand-color;
+}
+
+
+// Nesting
+.box {
+    display: none;
+      .btn {
+          width: 100px;
+        .text {
+          color: green;
+        }    
+      }
+}
+
+
+// Parent
+$list-color: yellow;
+
+.card {
+    background: $list-color;
+    &__wrapper {
+        width: 100%;
+    }
+    &__list {
+        height: 100px;
+        &--disabled {
+            display: none;
+        }
+    }
+}
+
+
+// Mixin
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius*2;
+       -moz-border-radius: $radius*3;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+}
+.card {
+    @include border-radius(10px);
+}
