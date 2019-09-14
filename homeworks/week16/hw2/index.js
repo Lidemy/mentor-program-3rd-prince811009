@@ -46,6 +46,8 @@ class Queue {
   
 console.log('--- Stack ---'); 
 const stack = new Stack(3);
+// if we want to set the size of the stack,
+// just use 'const stack = new Stack(n)'
 console.log(stack.push(1));
 console.log(stack.push(2));
 console.log(stack.push(3));
