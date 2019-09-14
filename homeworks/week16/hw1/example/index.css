@@ -1,0 +1,39 @@
+.box {
+  background: red;
+}
+
+.list {
+  background: red;
+}
+
+.box {
+  display: none;
+}
+.box .btn {
+  width: 100px;
+}
+.box .btn .text {
+  color: green;
+}
+
+.card {
+  background: yellow;
+}
+.card__wrapper {
+  width: 100%;
+}
+.card__list {
+  height: 100px;
+}
+.card__list--disabled {
+  display: none;
+}
+
+.card {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=index.css.map */
