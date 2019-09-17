@@ -159,6 +159,8 @@ console.log(5)
 ### Event Loop
 JavaScript 在瀏覽器中是以 single thread 執行，也就是一次執行一個任務；那非同步的運算則是怎麼進行呢 ? 因此就需要 Event Loop 這個機制幫我們操作 / 處理執行的順序。
 
+Event Loop 的任務是會來回一直不斷地去監測 Call Stack & Callback Queue 是否還有未執行的 function ，如果 Call Stack 都已執行完畢，且 Callback Queue 有尚未執行的東西，就將 Callback Queue 的 function 放置到 Call Stack 。
+
 ### Call Stack
 很重要的觀念是，所有程式語言都有 Call Stack 的概念。
 
@@ -166,6 +168,3 @@ JavaScript 在瀏覽器中是以 single thread 執行，也就是一次執行一
 
 ### Callback Queue
 一般的 function 會放在 Call Stack 中，而會放在 callback Queue 則是在有非同步事件的時候發生，例如 ```setTimeout()``` ，當執行到這個 function 時會放在 web API 中，等到 timer 時間到再放入 callback Queue 中，等 Event Loop 檢查完 Call Stack 內的函式都已經執行完畢後，就會把它再放入 Call Stack 中執行。
-
-### Event Loop 
-Event Loop 則是會來回一直不斷地去監測 Call Stack & Callback Queue 是否還有未執行的 function ，如果 Call Stack 都已執行完畢，且 Callback Queue 有尚未執行的東西，就將 Callback Queue 的 function 放置到 Call Stack 。
