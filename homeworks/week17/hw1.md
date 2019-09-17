@@ -39,7 +39,7 @@ console.log(5)
         | console.log(1) |  |  | |
         | main() |  |  | |
 
-         將 `console.log(1)` pop out
+         將 `console.log(1)` 的結果 console.log 出來，並且從 Call Stack pop out
 
         | Call Stack | Web API | Callback Queue | console.log |
         | --- | --- | --- | --- |
@@ -68,7 +68,7 @@ console.log(5)
         | console.log(3) |  |  |  |
         | main() |  | console.log(2) | 1|
 
-         將 `console.log(3)` pop out
+        將 `console.log(3)` 的結果 console.log 出來，並且從 Call Stack pop out
 
         | Call Stack | Web API | Callback Queue | console.log |
         | --- | --- | --- | --- |
@@ -99,16 +99,16 @@ console.log(5)
         | --- | --- | --- | --- |
         | console.log(5) | | console.log(4) | 1 |
         | main() |  | console.log(2) |3 |
-
-    7. 執行 `console.log(1)`，Call Stack pop out
-
+        
+        將 `console.log(5)` 的結果 console.log 出來，並且從 Call Stack pop out
+        
         | Call Stack | Web API | Callback Queue | console.log |
         | --- | --- | --- | --- |
         |  |  |  | 1 |
         |  | |  console.log(4) | 3 |
         | main() |  | console.log(2) |5 |
 
-    8. 待 Call Stack 都已執行完畢，將 `console.log(2)` 移到 Call Stack 中
+    7. 待 Call Stack 都已執行完畢，將 `console.log(2)` 移到 Call Stack 中
 
         | Call Stack | Web API | Callback Queue | console.log |
         | --- | --- | --- | --- |
@@ -116,7 +116,7 @@ console.log(5)
         | console.log(2) | |  console.log(4)  | 3 |
         | main() |  |  |5 |
 
-        執行 `console.log(2)`，Call Stack pop out
+        執行 `console.log(2)` 的結果 console.log 出來，並且從 Call Stack pop out
 
         | Call Stack | Web API | Callback Queue | console.log |
         | --- | --- | --- | --- |
