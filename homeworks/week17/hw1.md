@@ -57,7 +57,7 @@ console.log(5)
 
         | Call Stack | Web API | Callback Queue | console.log |
         | --- | --- | --- | --- |
-        | main() |  | setTimeout(() => { console.log(2) }, 0) |1 |
+        | main() |  | console.log(2) |1 |
 
     4. line 5 : `console.log(3)`
 
@@ -66,14 +66,14 @@ console.log(5)
         | Call Stack | Web API | Callback Queue | console.log |
         | --- | --- | --- | --- |
         | console.log(3) |  |  |  |
-        | main() |  | setTimeout(() => { console.log(2) }, 0) | 1|
+        | main() |  | console.log(2) | 1|
 
          將 `console.log(3)` pop out
 
         | Call Stack | Web API | Callback Queue | console.log |
         | --- | --- | --- | --- |
         | |  |  | 1 |
-        | main() |  | setTimeout(() => { console.log(2) }, 0) |3 |
+        | main() |  | console.log(2) |3 |
 
     5. line 6-8 : `setTimeout(() => { console.log(4) }, 0)`
 
@@ -82,14 +82,14 @@ console.log(5)
         | Call Stack | Web API | Callback Queue | console.log |
         | --- | --- | --- | --- |
         |  | setTimeout(() => { console.log(4) }, 0) |  |1  |
-        | main() |  | setTimeout(() => { console.log(2) }, 0) |3 |
+        | main() |  | console.log(2) |3 |
 
         等待 0 秒時間到，移至 Callback Queue
 
         | Call Stack | Web API | Callback Queue | console.log |
         | --- | --- | --- | --- |
-        | | |  setTimeout(() => { console.log(4) }, 0) | 1 |
-        | main() |  | setTimeout(() => { console.log(2) }, 0) |3 |
+        | | |  console.log(4) | 1 |
+        | main() |  | console.log(2) |3 |
 
     6. line 9 : `console.log(5)`
 
@@ -97,23 +97,23 @@ console.log(5)
 
         | Call Stack | Web API | Callback Queue | console.log |
         | --- | --- | --- | --- |
-        | console.log(5) | |  setTimeout(() => { console.log(4) }, 0) | 1 |
-        | main() |  | setTimeout(() => { console.log(2) }, 0) |3 |
+        | console.log(5) | | console.log(4) | 1 |
+        | main() |  | console.log(2) |3 |
 
     7. 執行 `console.log(1)`，Call Stack pop out
 
         | Call Stack | Web API | Callback Queue | console.log |
         | --- | --- | --- | --- |
         |  |  |  | 1 |
-        |  | |  setTimeout(() => { console.log(4) }, 0) | 3 |
-        | main() |  | setTimeout(() => { console.log(2) }, 0) |5 |
+        |  | |  console.log(4) | 3 |
+        | main() |  | console.log(2) |5 |
 
     8. 待 Call Stack 都已執行完畢，將 `console.log(2)` 移到 Call Stack 中
 
         | Call Stack | Web API | Callback Queue | console.log |
         | --- | --- | --- | --- |
         |  |  |  | 1 |
-        | console.log(2) | |  setTimeout(() => { console.log(4) }, 0) | 3 |
+        | console.log(2) | |  console.log(4)  | 3 |
         | main() |  |  |5 |
 
         執行 `console.log(2)`，Call Stack pop out
@@ -122,7 +122,7 @@ console.log(5)
         | --- | --- | --- | --- |
         |  |  |  | 1 |
         |  |  |  | 3 |
-        | | |  setTimeout(() => { console.log(4) }, 0) | 5 |
+        | | | console.log(4) | 5 |
         | main() |  |  |2 |
 
     9. 待 Call Stack 都已執行完畢，將 `console.log(4)` 移到 Call Stack 中
