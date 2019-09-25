@@ -90,7 +90,7 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
  - 主程式執行完畢
 
 ---
- 1.  建立 / 編譯 global Execution Context
+ 1. 建立 / 編譯 global Execution Context
     ```
     globalEC: {
         VO: {
@@ -101,11 +101,11 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
         scopeChain: [globalEC.VO]
     }
     ```
-    * 建立 global Execution Context，VO 紀錄變數及函式的宣告，以及初始化 scopeChain。
-    * Line 1 : ```var a = 1```
+      * 建立 global Execution Context，VO 紀錄變數及函式的宣告，以及初始化 scopeChain。
+      * Line 1 : ```var a = 1```
         
         a 變數宣告為 undefined
-    * Line 2 : ```function fn(){}```
+      * Line 2 : ```function fn(){}```
        
         ```fn``` 函式宣告
 
@@ -168,8 +168,8 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
         }
         ```
 
-   *  Line 3: ```console.log(a) // undefined ```
-   *  Line 4: ```var a = 5```
+      * Line 3: ```console.log(a) // undefined ```
+      * Line 4: ```var a = 5```
 
         將 a 賦值 5 。 
         ```
@@ -192,9 +192,9 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
         }
         ```
 
-   *  Line 5: ```console.log(a) // 5```
+      * Line 5: ```console.log(a) // 5```
 
-   *  Line 6: ```a++```
+      * Line 6: ```a++```
 
         a++ => a = 6
         ```
@@ -216,7 +216,7 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
             scopeChain: [fnEC.AO, globalEC.VO]
         }
         ```
-   *  Line 7: ```var a ```
+      * Line 7: ```var a ```
 
         宣告 a，a 不變
 
@@ -247,7 +247,8 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
         scopeChain: [fn2EC.AO, fnEC.AO, globalEC.VO]
     }
     ```
-    * Line 8: ``` fn2()```
+
+      * Line 8: ``` fn2()```
         建立 fn2 Execution Context
 
 6.  執行 fn2
@@ -279,10 +280,10 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
     }
     ```
 
-   *  Line 11: ```console.log(a)```
+      * Line 11: ```console.log(a)```
 
         fn2EC 的 scope 中沒有紀錄 a，往上至 fnEC.AO 找尋 a => a = 6，```console.log(a) // 6 ```
-   *  Line 12: ```a = 20```
+      * Line 12: ```a = 20```
 
         將 a 賦值 20，但同上 fn2EC 的 scope 中沒有紀錄 a，往上至 fnEC.AO 找尋 a => a = 20。
 
@@ -312,7 +313,7 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
             scopeChain: [fn2EC.AO, fnEC.AO, globalEC.VO]
         }
         ```
-   *  Line 13: ```b = 100```
+      * Line 13: ```b = 100```
 
         將 b 賦值 100，但同上 fn2EC 的 scope 中沒有紀錄 b，往上至 fnEC.AO 找尋 b => 沒有紀錄 b，往上至 globalEC.VO 找尋 b => 沒有紀錄 b，最後在全域範圍宣告 b 變數，b => b = 100。
 
@@ -345,7 +346,7 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
         }
         ```
 
-   *  回到 Line 9: ```console.log(a) // 20 ```
+    *  回到 Line 9: ```console.log(a) // 20 ```
 
         注意：執行此行程式為在 fn() 內，因此到 fnEC.AO 找 a => a = 20。
         
@@ -383,10 +384,10 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
         }
     ```
 
-   *  Line 17: ```console.log(a) // 1 ```
+      * Line 17: ```console.log(a) // 1 ```
 
         在 globalEC.VO 找 a => a = 1。
-   *  Line 18: ```a = 10```
+      * Line 18: ```a = 10```
 
         將 a 賦值 10。
 
@@ -418,8 +419,8 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
         }
         ```
 
-   *  Line 19: ```console.log(a) // 10 ```
+      * Line 19: ```console.log(a) // 10 ```
 
-   *  Line 20: ```console.log(b) // 100```
+      * Line 20: ```console.log(b) // 100```
 
 10. 主程式執行完畢
