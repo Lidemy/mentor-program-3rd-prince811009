@@ -168,8 +168,8 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
         }
         ```
 
-    *  Line 3: ```console.log(a) // undefined ```
-    *  Line 4: ```var a = 5```
+      * Line 3: ```console.log(a) // undefined ```
+      * Line 4: ```var a = 5```
 
         將 a 賦值 5 。 
         ```
