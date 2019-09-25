@@ -26,7 +26,7 @@ console.log(b)
 ---
 - answer : 
     ```
-    undefinde
+    undefined
     5
     6
     20
@@ -139,7 +139,7 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
     fnEC: {
         AO: {
             a: undefined,
-            fu2: function {
+            fn2: function {
             }
         },
         scopeChain: [fnEC.AO, globalEC.VO]
@@ -161,7 +161,7 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
         fnEC: {
             AO: {
                 a: undefined,
-                fu2: function {
+                fn2: function {
                 }
             },
             scopeChain: [fnEC.AO, globalEC.VO]
@@ -185,7 +185,7 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
         fnEC: {
             AO: {
                 a: 5,
-                fu2: function {
+                fn2: function {
                 }
             },
             scopeChain: [fnEC.AO, globalEC.VO]
@@ -210,7 +210,7 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
         fnEC: {
             AO: {
                 a: 6,
-                fu2: function {
+                fn2: function {
                 }
             },
             scopeChain: [fnEC.AO, globalEC.VO]
@@ -234,7 +234,7 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
     fnEC: {
         AO: {
             a: 6,
-            fu2: function {
+            fn2: function {
             }
         },
         scopeChain: [fnEC.AO, globalEC.VO]
@@ -266,7 +266,7 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
     fnEC: {
         AO: {
             a: 6,
-            fu2: function {
+            fn2: function {
             }
         },
         scopeChain: [fnEC.AO, globalEC.VO]
@@ -300,7 +300,7 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
         fnEC: {
             AO: {
                 a: 20,
-                fu2: function {
+                fn2: function {
                 }
             },
             scopeChain: [fnEC.AO, globalEC.VO]
@@ -332,7 +332,7 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
         fnEC: {
             AO: {
                 a: 20,
-                fu2: function {
+                fn2: function {
                 }
             },
             scopeChain: [fnEC.AO, globalEC.VO]
@@ -370,7 +370,7 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
         fnEC: {
             AO: {
                 a: 20,
-                fu2: function {
+                fn2: function {
                 }
             },
             scopeChain: [fnEC.AO, globalEC.VO]
@@ -405,7 +405,7 @@ JavaScript 為 Interpreted language ( 直譯語言 )，因此會先將程式碼�
         fnEC: {
             AO: {
                 a: 20,
-                fu2: function {
+                fn2: function {
                 }
             },
             scopeChain: [fnEC.AO, globalEC.VO]
