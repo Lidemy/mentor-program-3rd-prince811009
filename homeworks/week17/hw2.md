@@ -251,3 +251,4 @@ for(var i=0; i<5; i++) {
 ### Reference
  - [ES6 的 var 和 let](http://www.jstips.co/zh_tw/javascript/keyword-var-vs-let/)
  - [實作非同步迴圈](http://www.jstips.co/zh_tw/javascript/implementing-asynchronous-loops/)
+ - [Immediately invoked function expression](https://en.wikipedia.org/wiki/Immediately_invoked_function_expression)
