@@ -88,6 +88,11 @@ hello() // ??
 
  - ```hello() // ?? ```
 
-    這個 function 有趣的是，沒有一個 "誰" 來呼叫這項 function，但是我們要找到 ```this``` 的大前提必須知道 "呼叫 function 的那項物件"。
+  同理，先找出 ```hello()``` 所呼叫的完整 function 為何，而由 ```const hello = obj.inner.hello ``` 這行可得知， 目前是將 function handler ( ```obj.inner.hello``` ) 綁定到變數 `hello` 上，因此此時的 ```hello()``` 為：
+   ```
+    hello: function() {
+      console.log(this.value)
+    }
+   ```
 
-    因此目前的狀況適用預設來綁定，在非嚴格模式底下為 window，所以會 log 出 ```window.value``` 也就是 ```undefined``` 。
+  但因為 ```hello``` 這項變數中並沒有 ```value``` 的屬性，因此呼叫 ```hello()``` 也找不到 ```this.value``` 的值，因此目前的狀況適用預設來綁定，在非嚴格模式底下為 ```window.value``` ，因此最後回傳 ```undefined``` 。
