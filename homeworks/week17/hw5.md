@@ -7,6 +7,7 @@
  - [JavaScript_prototype chain #1](https://github.com/prince811009/learning-notes/issues/6)
  - [JavaScript_prototype chain #2](https://github.com/prince811009/learning-notes/issues/7)
  - [Is JavaScript a call-by-value or call-by-reference language?](https://github.com/prince811009/learning-notes/issues/8)
+ - [About `window.setTimeout()](https://github.com/prince811009/learning-notes/issues/9)
 
 用意也是希望往後翻找資料更方便，另一方面也是測試自己是否有把這些觀念理解清楚。
 
