@@ -2,12 +2,9 @@
 
 這周的教學及課程非常豐富跟充實，將許多先前課程累積且又出現機率很高的一些名詞，共同在這周進行了深度的補充與講解，也發現了 JavaScript 的水真的很深 XD 每一個細項都可以鑽研的很深入。
 
-這周也練習的將一些教學文用自己的方式寫成筆記，並記錄在 github 中，包括：
- - [About Hoisting, Closure and Prototype](https://github.com/prince811009/learning-notes/issues/5)
- - [JavaScript_prototype chain #1](https://github.com/prince811009/learning-notes/issues/6)
- - [JavaScript_prototype chain #2](https://github.com/prince811009/learning-notes/issues/7)
- - [Is JavaScript a call-by-value or call-by-reference language?](https://github.com/prince811009/learning-notes/issues/8)
- - [About `window.setTimeout()](https://github.com/prince811009/learning-notes/issues/9)
+這周也練習的將一些教學文用自己的方式寫成筆記，並記錄在 github 中：
+ - [learning-notes](https://github.com/prince811009/learning-notes/issues)
+
 
 用意也是希望往後翻找資料更方便，另一方面也是測試自己是否有把這些觀念理解清楚。
 
