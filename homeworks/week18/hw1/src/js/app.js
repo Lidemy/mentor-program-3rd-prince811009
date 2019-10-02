@@ -1,4 +1,4 @@
-const result = 'yoyo'
+var result = 'yoyo'
 
 console.log('yo')
 console.log('hello')
