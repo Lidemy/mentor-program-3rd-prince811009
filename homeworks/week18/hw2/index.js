@@ -1,3 +1,3 @@
 const add = require('./utils.js');
 
-console.log(add(2, 5));
+console.log(add(10, 3));
