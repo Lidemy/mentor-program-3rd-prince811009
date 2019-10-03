@@ -1,6 +1,6 @@
 ## gulp 跟 webpack 有什麼不一樣？我們可以不用它們嗎？
 ### Gulp
-Gulp 為一個建構在 node.js 和 npm 上的自動化整合工具，目的在於加強工作流程並且自動化。並且 Gulp 也提供了幾項 API : 
+Gulp 是建構在 node.js 和 npm 上的自動化整合工具，目的在於加強工作流程並且自動化。並且 Gulp 也提供了幾項 API : 
  - gulp.task : 執行工作
  - gulp.src : 執行資料來源
  - gulp.dest : 執行結果位置
